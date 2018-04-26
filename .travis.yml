@@ -4,7 +4,7 @@ addons:
    sources: [ 'ubuntu-toolchain-r-test' ]
    packages:
            - libstdc++-6-dev
-compiler: clang
+compiler: gcc
 before_script:
   - sudo apt-get install libboost-dev -y
   - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
@@ -15,7 +15,7 @@ before_script:
   - git clone https://github.com/davisking/dlib
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake .
   - cmake --build .
 
 script:
