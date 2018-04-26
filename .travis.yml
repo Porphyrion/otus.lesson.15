@@ -11,17 +11,14 @@ before_script:
   - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -qq
   - sudo apt-get install libspdlog-dev -y
-
-install:
+  - sudo apt-get install libopenblas-dev -y
   - git clone https://github.com/davisking/dlib
   - cd dlib
   - cmake .
   - cmake --build .
-  - pwd
   - cd ..
 
 script:
-- pwd
 - cmake .
 - cmake --build .
 - cmake --build . --target package
