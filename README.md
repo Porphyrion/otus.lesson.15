@@ -1,3 +1,11 @@
 # otus.lesson.15
 
-![Alt text](sky_plot.png to/?raw=true "Optional Title")
+Визуализация "звездного неба"
+
+![Alt text](https://github.com/Porphyrion/otus.lesson.15/blob/master/sky_plot.png)
+
+Визуализация данных из примера
+
+![Alt text](https://github.com/Porphyrion/otus.lesson.15/blob/master/example_plot.png)
+
+
