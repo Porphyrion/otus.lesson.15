@@ -17,9 +17,11 @@ install:
   - cd dlib
   - cmake .
   - cmake --build .
+  - pwd
   - cd ..
 
 script:
+- pwd
 - cmake .
 - cmake --build .
 - cmake --build . --target package
