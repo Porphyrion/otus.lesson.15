@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.12)
-# Every project needs a name.  We call this the "examples" project.
-project(examples)
+
+project(kkmeans)
 
 find_package(dlib REQUIRED)
 
@@ -10,8 +10,8 @@ include_directories(${Boost_INCLUDE_DIR})
 
 add_executable(kkmeans main.cpp)
 
-add_executable(data_generator datagenerator.cpp)
+add_executable(datagen datagenerator.cpp)
 
 target_link_libraries(kkmeans dlib::dlib)
 
-target_link_libraries(dg dlib::dlib)
+target_link_libraries(datagen dlib::dlib)

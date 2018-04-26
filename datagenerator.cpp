@@ -6,7 +6,7 @@
 
 int main(int argc, char const *argv[]) {
 
-    std::ofstream oFile("data.txt");
+    std::ofstream oFile("example_data.txt");
     dlib::rand rnd;
     double x = 0; double y = 0;
     int num = 50;
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[]) {
         oFile<<x<<";"<<y<<"\n";
     }
 
-    std::ofstream oFileTwo("data1.txt");
+    std::ofstream oFileTwo("sky_data.txt");
     for(auto i = 0; i < 200; i++){
         auto x = rnd.get_integer_in_range(-100,100);
         auto y = rnd.get_integer_in_range(-100,100);
