@@ -12,6 +12,11 @@ before_script:
   - sudo apt-get install libspdlog-dev -y
   - sudo apt-get install libdlib-dev
   - sudo apt-get install libopenblas-dev
+  - git clone https://github.com/davisking/dlib
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build .
 
 script:
 - cmake .
