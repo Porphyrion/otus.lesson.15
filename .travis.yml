@@ -14,9 +14,8 @@ before_script:
 
 install:
   - git clone https://github.com/davisking/dlib
-  - mkdir build
-  - cd build
-  - cmake ..
+  - cd dlib
+  - cmake .
   - cmake --build .
 
 script:
