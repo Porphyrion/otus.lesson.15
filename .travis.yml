@@ -1,4 +1,5 @@
 language: cpp
+dist: trusty
 addons:
  apt:
    sources: [ 'ubuntu-toolchain-r-test' ]
@@ -15,7 +16,7 @@ before_script:
   - git clone https://github.com/davisking/dlib
   - mkdir build
   - cd build
-  - cmake .
+  - cmake ..
   - cmake --build .
 
 script:
