@@ -17,6 +17,7 @@ install:
   - cd dlib
   - cmake .
   - cmake --build .
+  - cd ..
 
 script:
 - cmake .
