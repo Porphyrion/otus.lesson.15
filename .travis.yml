@@ -28,4 +28,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T kkmeans-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uporphyrion:$BINTRAY_API_KEY "https://api.bintray.com/content/porphyrion/otus/otus.lesson.15/$TRAVIS_BUILD_NUMBER/Kkmeans-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T Kkmeans-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uporphyrion:$BINTRAY_API_KEY "https://api.bintray.com/content/porphyrion/otus/otus.lesson.15/$TRAVIS_BUILD_NUMBER/Kkmeans-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
