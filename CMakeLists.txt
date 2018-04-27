@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 
 project(Kkmeans VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-# add_subdirectory(./dlib dlib_build)
-
-find_package(dlib)
+add_subdirectory(./dlib dlib_build)
 
 find_package(Boost)
 include_directories(${Boost_INCLUDE_DIR})
