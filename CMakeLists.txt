@@ -19,6 +19,7 @@ target_link_libraries(datagen dlib::dlib)
 
 install(TARGETS datagen RUNTIME DESTINATION bin)
 install(TARGETS kkmeans RUNTIME DESTINATION bin)
+install(FILES kkmeans_ex.txt DESTINATION .)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
