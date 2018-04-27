@@ -12,8 +12,8 @@ include_directories(${Boost_INCLUDE_DIR})
 add_executable(kkmeans main.cpp)
 add_executable(datagen datagenerator.cpp)
 
-target_link_libraries(kkmeans dlib::dlib)
-target_link_libraries(datagen dlib::dlib)
+target_link_libraries(kkmeans dlib)
+target_link_libraries(datagen dlib)
 
 install(TARGETS datagen RUNTIME DESTINATION bin)
 install(TARGETS kkmeans RUNTIME DESTINATION bin)
