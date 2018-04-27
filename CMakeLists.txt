@@ -4,9 +4,9 @@ project(Kkmeans VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_subdirectory(./dlib dlib_build)
 
-find_package(dlib REQUIRED)
-include_directories(${dlib_INCLUDE_DIRS})
-link_directories(${DLIB_LIBRARY_DIRS})
+#find_package(dlib)
+#include_directories(${dlib_INCLUDE_DIRS})
+#link_directories(${DLIB_LIBRARY_DIRS})
 
 find_package(Boost)
 include_directories(${Boost_INCLUDE_DIR})
