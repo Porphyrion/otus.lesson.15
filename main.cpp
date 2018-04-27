@@ -49,8 +49,8 @@ int main(int argc, char const *argv[])
         oFile<<i(0)<<";"<<i(1)<<";"<<test(i)<<endl;
     }
 
-    std::vector<unsigned long> assignments = spectral_cluster(kernel_type(0.1), samples, 4);
-    cout << mat(assignments) << endl;
+    //std::vector<unsigned long> assignments = spectral_cluster(kernel_type(0.1), samples, 4);
+    //cout << mat(assignments) << endl;
 
 
     return 0;
