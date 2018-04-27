@@ -4,18 +4,14 @@ project(Kkmeans VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_subdirectory(./dlib dlib_build)
 
-#find_package(dlib)
-#include_directories(${dlib_INCLUDE_DIRS})
-#link_directories(${DLIB_LIBRARY_DIRS})
-
 find_package(Boost)
 include_directories(${Boost_INCLUDE_DIR})
 
 add_executable(kkmeans main.cpp)
 add_executable(datagen datagenerator.cpp)
 
-target_link_libraries(kkmeans dlib::dlib)
-target_link_libraries(datagen dlib::dlib)
+target_link_libraries(kkmeans STATIC dlib::dlib)
+target_link_libraries(datagen STATIC dlib::dlib)
 
 install(TARGETS datagen RUNTIME DESTINATION bin)
 install(TARGETS kkmeans RUNTIME DESTINATION bin)
