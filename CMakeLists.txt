@@ -14,9 +14,9 @@ add_executable(datagen datagenerator.cpp)
 target_link_libraries(kkmeans dlib::dlib openblas)
 target_link_libraries(datagen dlib::dlib openblas)
 
-install(TARGETS datagen RUNTIME DESTINATION "${PROJECT_NAME}"/bin)
-install(TARGETS kkmeans RUNTIME DESTINATION "${PROJECT_NAME}"/bin)
-install(FILES kkmeans_ex.txt DESTINATION "${PROJECT_NAME}"/include)
+install(TARGETS datagen RUNTIME DESTINATION ${PROJECT_NAME}/bin)
+install(TARGETS kkmeans RUNTIME DESTINATION ${PROJECT_NAME}/bin)
+install(FILES kkmeans_ex.txt DESTINATION ${PROJECT_NAME}/include)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
