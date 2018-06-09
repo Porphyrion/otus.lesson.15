@@ -47,9 +47,9 @@ int main(int argc, char const *argv[]) {
     }
 
     std::ofstream oFileTwo("sky_data.txt");
-    for(auto i = 0; i < 200; i++){
-        auto x = rnd.get_integer_in_range(-100,100);
-        auto y = rnd.get_integer_in_range(-100,100);
+    for(auto i = 0; i < 300; i++){
+        auto x = rnd.get_double_in_range(-100,100);
+        auto y = rnd.get_double_in_range(-100,100);
         oFileTwo<<x<<";"<<y<<'\n';
     }
 

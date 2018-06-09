@@ -10,7 +10,7 @@ using namespace std;
 using namespace dlib;
 
 using sample_type = matrix<double, 2, 1>;
-using kernel_type =  radial_basis_kernel<sample_type>;
+using kernel_type = radial_basis_kernel<sample_type>;
 
 int main(int argc, char const *argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     } else {
         nCenters = 3;
     }
-    kcentroid<kernel_type> kc(kernel_type(0.1),0.01, 12);
+    kcentroid<kernel_type> kc(kernel_type(0.0001), 0.000001, 30);
     kkmeans<kernel_type> test(kc);
 
     std::vector<sample_type> samples;
@@ -43,15 +43,14 @@ int main(int argc, char const *argv[])
 
     test.set_number_of_centers(nCenters);
     pick_initial_centers(nCenters, initial_centers, samples, test.get_kernel());
-    test.train(samples,initial_centers);
+    //for(auto i : initial_centers)
+    //    cout<<i(0)<<" "<<i(1)<<endl;
+    test.train(samples, initial_centers);
+
 
     for(auto i : samples){
         oFile<<i(0)<<";"<<i(1)<<";"<<test(i)<<endl;
     }
-
-    //std::vector<unsigned long> assignments = spectral_cluster(kernel_type(0.1), samples, 4);
-    //cout << mat(assignments) << endl;
-
 
     return 0;
 }
